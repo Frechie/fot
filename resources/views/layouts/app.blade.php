@@ -12,7 +12,7 @@
     <meta name="keywords" content="Come show forth God&apos;s potential in you">
     <meta name="keywords" content="Its FOT Revsmped: The new normal...">
     <title>HYPP Festival of Talents</title>
-    <link href="{{asset('assets/admin/img/icon/seaicologo.ico') }}" rel="icon">
+    <link href="{{asset('assets/admin/img/icon/h_favicon.ico') }}" rel="icon">
     <link href="{{ asset('assets/icofont/icofont.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/admin/css/adminlte.min.css') }}">
