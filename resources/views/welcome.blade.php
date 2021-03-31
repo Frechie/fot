@@ -1,5 +1,6 @@
 @extends('layouts.auth')
 @section('content')
-Testing home page
-
+<div class="container-fluid">
+Test
+</div>
 @endsection
