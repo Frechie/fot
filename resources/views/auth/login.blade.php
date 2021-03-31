@@ -4,7 +4,7 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
         <a href="{{url('/') }}">
-            <img class="img-fluid" src="{{asset('assets/admin/img/icon/hyppLogo.jpeg') }}" style="width: 70px; height:70px" alt="Hypp Logo">
+            <img class="img-fluid" src="{{asset('assets/admin/img/icon/hyppLogo.jpeg') }}" style="width: 50px; height:50px" alt="Hypp Logo">
         </a>
         <h1 class="h3 mb-3 text-white text-bold"><strong>Login</strong></h1>
 
