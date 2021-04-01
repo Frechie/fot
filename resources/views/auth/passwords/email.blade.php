@@ -8,7 +8,6 @@
 <main class="form-signin text-center">
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
-        <input type="hidden" name="token" value="{{ $token }}">
         <a href="{{url('/') }}">
             <img class="img-fluid" src="{{asset('assets/admin/img/icon/hyppLogo.jpeg') }}" style="width: 70px; height:70px" alt="Hypp Logo">
         </a>
@@ -23,7 +22,7 @@
             </span>
             @enderror
         </div>
-        <button type="submit" class="w-100 btn btn-lg btn-success"> {{ __('Send Password Reset Link') }}</button>
+        <button type="submit" class="w-100 btn btn-lg btn-primary"> {{ __('Send Password Reset Link') }}</button>
     </form>
 </main>
 @endsection
