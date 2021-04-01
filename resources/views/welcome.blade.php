@@ -57,7 +57,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ asset('assets/admin/img/slide-3.jpg') }}" class="img-fluid w-100 h-100" alt="">
+                    <img src="{{ asset('assets/admin/img/slide-3.png') }}" class="img-fluid w-100 h-100" alt="">
                     <div class="dark-overlay"></div>
                     <div class="container">
                         <div class="carousel-caption">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('assets/admin/img/slide-3.jpg') }}" class="img-fluid w-100 h-100" alt="">
+                    <img src="{{ asset('assets/admin/img/slide-3.png') }}" class="img-fluid w-100 h-100" alt="">
                     <div class="dark-overlay"></div>
                     <div class="container">
                         <div class="carousel-caption">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('assets/admin/img/slide-3.jpg') }}" class="img-fluid w-100 h-100" alt="">
+                    <img src="{{ asset('assets/admin/img/slide-3.png') }}" class="img-fluid w-100 h-100" alt="">
                     <div class="dark-overlay"></div>
                     <div class="container">
                         <div class="carousel-caption">
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('assets/admin/img/slide-3.jpg') }}" class="img-fluid w-100 h-100" alt="">
+                    <img src="{{ asset('assets/admin/img/slide-3.png') }}" class="img-fluid w-100 h-100" alt="">
                     <div class="dark-overlay"></div>
                     <div class="container">
                         <div class="carousel-caption">
@@ -138,7 +138,7 @@
                     <div class="col-lg-6 mt-4 mt-lg-0">
                         <div class="member d-flex align-items-start">
                             <div class="pic">
-                                <img src="{{ asset('assets/admin/img/slide-3.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/admin/img/slide-3.png') }}" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
                                 <h4>Odufuwa Tayo</h4>

@@ -216,13 +216,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class=" nav-link" href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a class=" nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <div class="icon">
                                     <i class="icofont-sign-out text-danger"></i>
                                     <p>Logout</p>
                                 </div>
                             </a>
-                            <form id="logout-form" action="" method="POST" class="d-none">
+                            <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
                                 @csrf
                             </form>
                         </li>

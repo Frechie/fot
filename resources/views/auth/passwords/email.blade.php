@@ -1,16 +1,17 @@
 @extends('layouts.auth')
 @section('content')
-@if (session('status'))
-<div class="alert alert-success" role="alert">
-    {{ session('status') }}
-</div>
-@endif
+
 <main class="form-signin text-center">
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
         <a href="{{url('/') }}">
             <img class="img-fluid" src="{{asset('assets/admin/img/icon/hyppLogo.jpeg') }}" style="width: 70px; height:70px" alt="Hypp Logo">
         </a>
+        @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
+        @endif
         <h1 class="h3 mb-3 text-white text-bold"><strong>{{ __('Reset Password') }}</strong></h1>
 
         <div class="form-floating">
