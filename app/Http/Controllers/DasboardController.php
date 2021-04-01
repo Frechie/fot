@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller {
+class DasboardController extends Controller {
     /**
      * Create a new controller instance.
      *
@@ -21,5 +21,20 @@ class HomeController extends Controller {
      */
     public function index()    {
         return view('home');
+    }
+
+    public function getUserVideoUpload(Request $request){
+        //get User uplaods
+        return null;
+    }
+
+    public function uploadContestantVideo(Request $request){
+        //get the contestant id
+        //save the video in the db
+        return null;
+    }
+
+    public function validateUpload(){
+
     }
 }
