@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile\UserUploads;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 
-class DasboardController extends Controller {
+class DasboardController extends Controller{
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()    {
         $this->middleware(['auth', 'verified']);
     }
 
@@ -21,27 +23,19 @@ class DasboardController extends Controller {
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()    {
-        return view('home');
-    }
+    public function index(Request $request)    {
 
-    public function getUserVideoUpload(Request $request){
-        //get User uplaods
-        return null;
-    }
+        $entry = UserUploads::where('user_id',  $request->user()->user_id)
+                            ->where('upload_type', 'video')
+                            ->orderBy('created_at', 'desc')
+                            ->take(3)
+                            ->get();
 
-    public function uploadContestantVideo(Request $request){
-        //get the contestant id
-        //save the video in the db
-        return null;
-    }
+        $profilePix = UserUploads::where('upload_type', 'profile_pix')
+                                ->orderBy('created_at', 'desc')
+                                ->get('upload_dir')
+                                ->first();
 
-    // public function validateUpload(Request $request){
-    //     if ($request->upload_video->validate(['required', 'mimetypes:video/avi,video/mpeg', 'max:10024'])){
-    //     $upload =  $request->file('issue_upload')->getClientOriginalName();
-    //     $fileName = pathinfo($upload, PATHINFO_FILENAME);
-    //     $uploadExt = $request->file('issue_upload')->extension();
-    //     return $fileName.'_'.time().'.'.$uploadExt;
-    // }
-    
+        return view('home')->with(['userEntries' => $entry, 'profile' => $profilePix]);
+    }
 }

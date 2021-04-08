@@ -56,10 +56,10 @@ class User extends Authenticatable implements MustVerifyEmail{
     }
 
     public function getUserContact(){
-        return $this->hasMany(UserContact::class);  
+        return $this->hasMany(UserContact::class, 'user_id', 'contact_id');  
   }
 public function getUserUploads(){
-    return $this->hasMany(UserUploads::class);
+    return $this->hasMany(UserUploads::class, 'upload_id', 'user_id');
 }
 
 }

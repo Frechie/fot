@@ -18,6 +18,6 @@ class UserUploads extends Model{
     ];
 
     public  function getUser(){
-        return $this->belongsTo(User::class, 'user_id', 'upload_id');
+        return $this->belongsTo(User::class);
     }
 }

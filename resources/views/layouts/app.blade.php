@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,10 +33,10 @@
             <ul class="navbar-nav ">
                 <div class="">
                     <span class="btn btn-light">
-                       {{ Auth::user()->getRole->role_name}} Reg Number: HFOT21-{{ Auth::user()->user_id }}
+                        {{ Auth::user()->getRole->role_name}} Reg Number: HFOT21-{{ Auth::user()->user_id }}
                     </span>
                 </div>
-                
+
             </ul>
 
         </nav>
@@ -44,7 +45,7 @@
             <!-- Brand Logo -->
             <a href="https://thehypp.com.ng/" class="brand-link sidebar-dark-purple text-white text-center" target="_blank">
                 <div class="icon brand-name">
-            <img class="img-fluid" src="{{asset('assets/admin/img/icon/hyppLogo.jpeg') }}" style="width: 50px; height:50px" alt="Hypp Logo">
+                    <img class="img-fluid" src="{{asset('assets/admin/img/icon/hyppLogo.jpeg') }}" style="width: 50px; height:50px" alt="Hypp Logo">
                 </div>
             </a>
 
@@ -55,7 +56,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{ url('/dashboard') }}" class="nav-link">
                                 <div class="icon">
                                     <i class="nav-icon icofont-user text-white"></i>
                                     <p> Profile </p>
@@ -67,108 +68,22 @@
                             <a href="" class="nav-link">
                                 <div class="icon">
                                     <i class="nav-icon icofont-bag-alt text-white"></i>
-                                    <p>Uploads</p>
+                                    <p>Operations</p>
 
                                 </div>
                                 <i class="fas fa-angle-left right"></i>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{ url('/profile/upload-video-entry') }}" class="nav-link">
                                         <i class="nav-icon icofont-hard-disk text-white"></i>
-                                        <p>Videos</p>
+                                        <p>Upload Videos</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">
+                                    <a href="{{ url('/profile/view-entry') }}" class="nav-link">
                                         <i class="nav-icon icofont-plus-circle text-white"></i>
-                                        <p>Report</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="nav-icon icofont-chart-histogram"></i>
-                                <p>Reports </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item has-treeview">
-                            <a href="" class="nav-link">
-                                <div class="icon">
-                                    <i class="nav-icon icofont-learn text-white"></i>
-                                    <p>Issues</p>
-
-                                </div>
-                                <i class="fas fa-angle-left right"></i>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-database text-white"></i>
-                                        <p>All Issues</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-plus-circle text-white"></i>
-                                        <p>New Issues</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-refresh"></i>
-                                        <p>In-Progress </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-question-circle"></i>
-                                        <p>Pending HD </p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-ui-check"></i>
-                                        <p>Completed Issues</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <div class="icon">
-                                    <i class="nav-icon icofont-address-book text-white"></i>
-                                    <p>
-                                        Manage Users
-                                    </p>
-                                </div>
-                                <i class="fas fa-angle-left right"></i>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <div class="icon">
-                                            <i class="nav-icon icofont-search-user"></i>
-                                            <p>Users</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-user text-white"></i>
-                                        <p>Create User</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-lock text-white"></i>
-                                        <p>Permissions</p>
+                                        <p>Compettion Entries</p>
                                     </a>
                                 </li>
                             </ul>
