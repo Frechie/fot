@@ -31,25 +31,20 @@
 
             <ul class="navbar-nav ">
                 <div class="">
-                    <span class="">
-                        <i class="icofont icofont-ui-user"></i> {{ Auth::user()->name  }}
+                    <span class="btn btn-light">
+                       {{ Auth::user()->getRole->role_name}} Reg Number: HFOT21-{{ Auth::user()->user_id }}
                     </span>
                 </div>
-                <div class="" style="margin-left: 5px;">
-                    <span class="">
-                        <i class="icofont icofont-email"></i> {{ Auth::user()->email }}
-                    </span>
-                </div>
+                
             </ul>
 
         </nav>
 
         <aside class="main-sidebar sidebar-dark-purple elevation-4">
             <!-- Brand Logo -->
-            <a href="https://thehypp.com.ng/" class="brand-link bg-purple text-white text-center" target="_blank">
+            <a href="https://thehypp.com.ng/" class="brand-link sidebar-dark-purple text-white text-center" target="_blank">
                 <div class="icon brand-name">
-                    <i class="nav-icon icofont-home text-white"></i>
-                    SEAICO TECHNOLOGIES
+            <img class="img-fluid" src="{{asset('assets/admin/img/icon/hyppLogo.jpeg') }}" style="width: 50px; height:50px" alt="Hypp Logo">
                 </div>
             </a>
 
@@ -62,8 +57,8 @@
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <div class="icon">
-                                    <i class="nav-icon icofont-dashboard text-white"></i>
-                                    <p> Dashboard </p>
+                                    <i class="nav-icon icofont-user text-white"></i>
+                                    <p> Profile </p>
                                 </div>
 
                             </a>
@@ -72,7 +67,7 @@
                             <a href="" class="nav-link">
                                 <div class="icon">
                                     <i class="nav-icon icofont-bag-alt text-white"></i>
-                                    <p>Asset Classes</p>
+                                    <p>Uploads</p>
 
                                 </div>
                                 <i class="fas fa-angle-left right"></i>
@@ -81,55 +76,19 @@
                                 <li class="nav-item">
                                     <a href="" class="nav-link">
                                         <i class="nav-icon icofont-hard-disk text-white"></i>
-                                        <p>Categories</p>
+                                        <p>Videos</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="" class="nav-link">
                                         <i class="nav-icon icofont-plus-circle text-white"></i>
-                                        <p>New Category</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-database"></i>
-                                        <p>Sub-Categories</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-plus-square"></i>
-                                        <p>New Sub-Category</p>
+                                        <p>Report</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="nav-item has-treeview">
-                            <a href="" class="nav-link">
-                                <div class="icon">
-                                    <i class="nav-icon icofont icofont-users-alt-3 text-white"></i>
-                                    <p>Clients</p>
-
-                                </div>
-                                <i class="fas fa-angle-left right"></i>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont icofont-users text-white"></i>
-                                        <p>Clients</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">
-                                        <i class="nav-icon icofont-plus-circle text-white"></i>
-                                        <p>New Clients</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
+                        
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="nav-icon icofont-chart-histogram"></i>

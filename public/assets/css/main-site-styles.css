@@ -19,6 +19,7 @@ a.nav-link, a.navbar-brand {
   font-size: 1rem !important;
 }
 
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
@@ -238,25 +239,22 @@ li .nav-link, li .dropdown-item {
   margin-bottom: 0px;
 }
 
-/*--------------------------------------------------------------
-# Team
---------------------------------------------------------------*/
-
 .team {
-  background: linear-gradient(rgba(233, 235, 236, 0.952), rgba(189, 190, 192, 0.959)), url("../img/portfolio/portfolio-1.jpg") fixed center center;
+  background: linear-gradient(rgba(218, 221, 223, 0.884), rgba(171, 172, 173, 0.932)), url("../img/portfolio/portfolio-1.jpg") fixed center center;
+  
 }
 
 .team .member {
   position: relative;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.699);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;s
 }
 
 .team .member .pic {
   overflow: hidden;
-  width: 180px;
-  border-radius: 70%;
+  border-radius: 2px;
 }
 
 .team .member .pic img {
