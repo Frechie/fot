@@ -32,9 +32,15 @@ class DasboardController extends Controller{
                             ->get();
 
         $profilePix = UserUploads::where('upload_type', 'profile_pix')
+                                ->where('user_id',  $request->user()->user_id)
                                 ->orderBy('created_at', 'desc')
-                                ->get('upload_dir')
                                 ->first();
+                                
+        if ($profilePix == null){
+            $profilePix = 'assets/admin/img/icon/hyppLogo.jpeg';
+        }
+        
+        $profilePix = $profilePix->upload_dir;
 
         return view('home')->with(['userEntries' => $entry, 'profile' => $profilePix]);
     }

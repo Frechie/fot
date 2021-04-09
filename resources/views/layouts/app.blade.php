@@ -128,6 +128,16 @@
     </script>
     <script src="{{ asset('assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/adminlte.js') }}"></script>
+    <script>
+        $('#uploadVideo').bind('change', function() {
+
+            if(this.files[0].size /(1024 *1024) > 20){
+                alert('File size should not exceed 20MB');
+            }
+                       
+
+        });
+    </script>
 </body>
 
 </html>

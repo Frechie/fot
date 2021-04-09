@@ -22,12 +22,22 @@
     <div class="container-fluid">
         @if(session()->has('profilePicUploadSuccessMessage'))
         <div class="alert alert-success text-white" role="alert">
-            <h5 class="">{{ session()->get('successMessage') }}</h5>
+            <h5 class="">{{ session()->get('profilePicUploadSuccessMessage') }}</h5>
         </div>
         @endif
         @if(session()->has('profilePicUploadErrorMessage'))
         <div class="alert alert-danger text-white" role="alert">
             <h5 class="">{{ session()->get('profilePicUploadErrorMessage') }}</h5>
+        </div>
+        @endif
+        @if(session()->has('entryVidUploadSuccessMessage'))
+        <div class="alert alert-success text-white" role="alert">
+            <h5 class="">{{ session()->get('entryVidUploadSuccessMessage') }}</h5>
+        </div>
+        @endif
+        @if(session()->has('entryVidUploadErrorMessage'))
+        <div class="alert alert-danger text-white" role="alert">
+            <h5 class="">{{ session()->get('entryVidUploadErrorMessage') }}</h5>
         </div>
         @endif
         <div class="row">
@@ -37,7 +47,9 @@
                 <div class="card card-warning card-outline">
                     <div class="card-body box-profile">
                         <div class="text-center">
-                            <img class="profile-user-img img-fluid img-circle" src="{{ asset($profile->upload_dir) }}" alt="User profile picture">
+                            
+                            <img class="profile-user-img img-fluid img-circle" src="{{ asset($profile) }}" alt="User profile picture">
+                           
                             <i class="icofont icofont-ui-edit text-primary" data-toggle="modal" data-target="#profilePix"></i>
                             <div class="modal fade" id="profilePix" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
@@ -125,14 +137,24 @@
                     <div class="card-header bg-info">
                         Competition Uploads:
                     </div>
-                @if( $userEntries->count() === 0)
-                        <div class="card-body bg-muted">                           
-                            <h4>No entry for your profile yet!!!</h4>                  
+                    @if( $userEntries->count() === 0)
+                    <div class="card-body bg-muted">
+                        <h4>No entry for your profile yet!!!</h4>
+                        <a href="{{ url('/profile/upload-video-entry') }}" class="btn btn-dark">Upload your competition entry</a>
+
+                    </div>
+                    @else
+                    <div class="card-body card-success" >
+                        <div class="row">
+                            @foreach($userEntries as $userEntry)
+                            <div class="col-md-4">
+                            <video class="bg-muted w-100" height="auto" autoplay muted controls>
+                                <source src="{{ asset($userEntry->upload_dir) }}" type="video/mp4">
+                            </video>
+                            </div>
+                            @endforeach
                         </div>
-                     @else
-                        <div class="card-body card-success">
-                            <h4>Your data appears here</h4>
-                        </div>        
+                    </div>
                     @endif
                 </div>
             </div>

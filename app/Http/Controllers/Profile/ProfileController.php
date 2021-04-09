@@ -37,9 +37,24 @@ class ProfileController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         //
+        $user_video = '';
+        if (!$request->hasFile('upload')) {
+            return Redirect::back()->with('entryVidUploadErrorMessage', 'Kindly upload a video to enter the competition!!!');
+         }
+         $user_video  = $request->user()->name.'-upload-'.$this->uploadFile($request);
+
+         $user_upload = UserUploads::create([
+            'user_id' => $request->user()->user_id,
+            'upload_type' => $request['upload_type'],
+            'upload_dir' => '/storage/video/'.$request->user()->name.'/'.$user_video
+         ]);
+      
+        if ($user_upload) {
+            $request->file('upload')->storeAs('video/'.$request->user()->name, $user_video);
+            return redirect('/dashboard')->with('entryVidUploadSuccessMessage', 'Video Entry uploaded successfully!!!');
+        }
 
     }
 
@@ -56,7 +71,7 @@ class ProfileController extends Controller {
          $user_upload = UserUploads::create([
             'user_id' => $request->user()->user_id,
             'upload_type' => $request['upload_type'],
-            'upload_dir' => 'profile/'.$request->user()->name.'/'.$user_profile_dir
+            'upload_dir' => '/storage/profile/'.$request->user()->name.'/'.$user_profile_dir
          ]);
       
         if ($user_upload) {

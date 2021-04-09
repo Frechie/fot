@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 Route::get('/dashboard', [App\Http\Controllers\DasboardController::class, 'index'])->name('home');
-//Route::resource('profile', App\Http\Controllers\Profile\ProfileController::class);
 Route::put('/profile/upload-profile-pix', [App\Http\Controllers\Profile\ProfileController::class, 'updateProfilePix']);
 Route::get('/profile/upload-video-entry', [App\Http\Controllers\Profile\ProfileController::class, 'uploadVideoEntry']);
 Route::get('/profile/view-entry', [App\Http\Controllers\Profile\ProfileController::class, 'viewEntry']);
+Route::post('/profile/upload-video-entry', [App\Http\Controllers\Profile\ProfileController::class, 'store']);
