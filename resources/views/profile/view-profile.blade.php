@@ -9,18 +9,22 @@
         </div>
         @else
         <div class="card">
-            <div class="card-body">
-                <h2 class="card-title text-bold">All Cases</h2>
-                <div class="row">
+            <div class="card-header">Competition Entries</div>
+            <div class="row">
                     @foreach($userUploads as $userUpload)
-                    <div class="col-md-3">
-                        <video src=""></video>
-                    </div>
+                
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card-body">
+                            <video class="bg-muted w-100" height="auto" autoplay muted controls>
+                                <source src="{{ asset($userUpload->upload_dir) }}" type="video/mp4">
+                            </video>
+                            <a href="#" class="btn bg-explore text-white">Download</a>
+                        </div>
+                    </div>                
                     @endforeach
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 @endif

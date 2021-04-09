@@ -148,9 +148,12 @@
                         <div class="row">
                             @foreach($userEntries as $userEntry)
                             <div class="col-md-4">
-                            <video class="bg-muted w-100" height="auto" autoplay muted controls>
-                                <source src="{{ asset($userEntry->upload_dir) }}" type="video/mp4">
+                            <video class="bg-muted w-100" height="auto" preload="metadata">
+                                <source src="{{ asset($userEntry->upload_dir) }}#t=0.7" type="video/mp4">
                             </video>
+                            <article>
+                                <p>Uploaded on <span>{{ $userEntry->created_at->format('D, d M Y') }} </span></p>
+                            </article>
                             </div>
                             @endforeach
                         </div>
