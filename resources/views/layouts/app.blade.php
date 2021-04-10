@@ -64,30 +64,27 @@
 
                             </a>
                         </li>
-                        <li class="nav-item has-treeview">
-                            <a href="" class="nav-link">
-                                <div class="icon">
-                                    <i class="nav-icon icofont-bag-alt text-white"></i>
-                                    <p>Operations</p>
 
-                                </div>
-                                <i class="fas fa-angle-left right"></i>
+                        <li class="nav-item">
+                            <a href="{{ url('/profile/edit') }}" class="nav-link">
+                                <i class="nav-icon icofont-id-card text-white"></i>
+                                <p>Update Profile</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{ url('/profile/upload-video-entry') }}" class="nav-link">
-                                        <i class="nav-icon icofont-hard-disk text-white"></i>
-                                        <p>Upload Videos</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ url('/profile/view-entry') }}" class="nav-link">
-                                        <i class="nav-icon icofont-plus-circle text-white"></i>
-                                        <p>Compettion Entries</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="{{ url('/profile/upload-video-entry') }}" class="nav-link">
+                                <i class="nav-icon icofont-cloud-upload text-white"></i>
+                                <p>Upload Videos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('/profile/view-entry') }}" class="nav-link">
+                                <i class="nav-icon icofont-presentation text-white"></i>
+                                <p>Compettion Entries</p>
+                            </a>
+                        </li>
+
 
                         <li class="nav-item">
                             <a class=" nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -131,10 +128,10 @@
     <script>
         $('#uploadVideo').bind('change', function() {
 
-            if(this.files[0].size /(1024 *1024) > 20){
+            if (this.files[0].size / (1024 * 1024) > 20) {
                 alert('File size should not exceed 20MB');
             }
-                       
+
 
         });
     </script>

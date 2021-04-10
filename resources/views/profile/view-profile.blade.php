@@ -18,10 +18,10 @@
                             <video class="bg-muted w-100" height="auto" autoplay muted controls>
                                 <source src="{{ asset($userUpload->upload_dir) }}" type="video/mp4">
                             </video>
-                            <a href="#" class="btn bg-explore text-white">Download</a>
                         </div>
                     </div>                
                     @endforeach
+                    <hr class="bg-explore text-white">
                 </div>
             </div>
         </div>

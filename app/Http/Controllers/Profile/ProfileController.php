@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profile\UserContact;
+use App\Models\Profile\UserProfile;
 use App\Models\Profile\UserUploads;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -112,9 +114,9 @@ class ProfileController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function viewProfile(Request $request) {
         //
+        return view('profile.create-profile');
     }
 
     /**
@@ -124,9 +126,22 @@ class ProfileController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function updateProfile(Request $request)     {
         //
+        $userProfile = UserProfile::create([
+            'user_id' => $request->user()->user_id,
+            'user_bio' => $request['user_bio'],
+            'user_amazing_talent' => $request['amazing_talent'],
+            'upload_id' =>  $request->user()->user_id
+        ]);
+
+        if ($userProfile){
+            return redirect('/dashboard')
+                        ->with('updateProfileSuccessfulMsg', 'Hey '.$request->user()->name.', you have successfully updated your profile!!!');
+        }else{
+            return Redirect::back()->with('profileUpdateErrorMsg', 'Error with the update. Try some time later!!!');
+        }
+       
     }
 
     /**
@@ -135,9 +150,20 @@ class ProfileController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function contactUpdate(Request $request)   {
         //
+        $userInfo = UserContact::create([
+            'user_id' => $request->user()->user_id,
+            'user_country' => $request['user_country'],
+            'user_state' => $request['userState'],
+            'user_address' => $request['user_address'],
+            'user_mobile' => $request['userMobile']
+        ]);
+
+        if ($userInfo){
+            return Redirect::back()->with('contactSuccessMessage', 'Contact info updated successfully!!!');
+        }
+       
     }
 
     public function uploadFile(Request $request){

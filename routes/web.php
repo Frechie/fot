@@ -23,3 +23,6 @@ Route::put('/profile/upload-profile-pix', [App\Http\Controllers\Profile\ProfileC
 Route::get('/profile/upload-video-entry', [App\Http\Controllers\Profile\ProfileController::class, 'uploadVideoEntry']);
 Route::get('/profile/view-entry', [App\Http\Controllers\Profile\ProfileController::class, 'viewEntry']);
 Route::post('/profile/upload-video-entry', [App\Http\Controllers\Profile\ProfileController::class, 'store']);
+Route::post('/profile/contact-update', [App\Http\Controllers\Profile\ProfileController::class, 'contactUpdate']);
+Route::get('/profile/edit', [App\Http\Controllers\Profile\ProfileController::class, 'viewProfile']);
+Route::post('/profile/update', [App\Http\Controllers\Profile\ProfileController::class, 'updateProfile']);
