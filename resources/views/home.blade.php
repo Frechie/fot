@@ -285,7 +285,7 @@
                     <div class="card-body card-success">
                         <div class="row">
                             @foreach($userEntries as $userEntry)
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <video class="bg-muted w-100" height="auto" preload="metadata">
                                     <source src="{{ asset($userEntry->upload_dir) }}#t=0.7" type="video/mp4">
                                 </video>

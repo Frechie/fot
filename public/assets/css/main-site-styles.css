@@ -34,7 +34,7 @@ body {
 }
 
 .carousel-caption {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
   bottom: 3rem;
   z-index: 10;
 }
@@ -94,6 +94,42 @@ li .nav-link, li .dropdown-item {
  
 }
 
+
+@media (max-width: 768px) {
+
+.carousel-caption h1{
+  font-size: 2.5rem !important;
+  font-weight: bold;
+}
+
+.carousel-caption h2{
+  font-size: 1.2rem;
+  font-weight: lighter;
+  font-style: oblique ;
+}
+}
+
+.carousel-caption h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+
+.carousel-caption h2{
+  font-size: 2.5rem;
+  font-weight: lighter;
+  font-style: oblique ;
+}
+
+
+.carousel-caption p{
+  font-size: 1.2rem;
+  font-weight: lighter;
+  font-style: italic ;
+  font-family:cursive;
+}
+
+
 .icon-box-size {
   height: 300px;
 }
@@ -125,6 +161,31 @@ li .nav-link, li .dropdown-item {
   background: linear-gradient(rgba(105, 17, 156, 0.952), rgba(59, 2, 83, 0.959));
   color: #fff !important;
 }
+
+.slide-purple-bg {
+  background: linear-gradient( rgba(238, 204, 11, 0.973),rgba(105, 17, 156, 0.973), rgba(59, 2, 83, 0.945)), url("../admin/img/fot-bg-wide.jpg") fixed center center;
+  transition: opacity 0.5s ease-out;
+  color: #fff !important;
+}
+
+
+.slide-info-bg {
+  background: linear-gradient(rgba(4, 143, 161, 0.973), rgba(2, 64, 83, 0.945)), url("../admin/img/fot-bg-wide.jpg") fixed center center;
+  color: #fff !important;
+}
+
+
+.slide-success-bg {
+  background: linear-gradient(rgba(3, 151, 23, 0.973), rgba(2, 83, 45, 0.945)), url("../admin/img/fot-bg-wide.jpg") fixed center center;
+  color: #fff !important;
+}
+
+
+.slide-primary-bg {
+  background: linear-gradient(rgba(31, 17, 156, 0.973), rgba(3, 2, 83, 0.945)), url("../admin/img/fot-bg-wide.jpg") fixed center center;
+  color: #fff !important;
+}
+
 
 #footer .footer-top {
   background: linear-gradient(rgba(75, 35, 99, 0.952), rgba(46, 5, 63, 0.959));
@@ -240,7 +301,7 @@ li .nav-link, li .dropdown-item {
 }
 
 .team {
-  background: linear-gradient(rgba(218, 221, 223, 0.884), rgba(171, 172, 173, 0.932)), url("../img/portfolio/portfolio-1.jpg") fixed center center;
+  background: linear-gradient(rgba(218, 221, 223, 0.884), rgba(171, 172, 173, 0.932)), url("../admin/img/fot-bg-wide.jpg") fixed center center;
   
 }
 

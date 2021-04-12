@@ -51,52 +51,72 @@
                 <button type="button" data-bs-target="#slider" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('assets/img/slide/slide-1.jpg') }}" class="img-fluid w-100 h-100" alt="">
-                    <div class="dark-overlay"></div>
+                <div class="carousel-item active slide-purple-bg text-white">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="animated fadeInDown">Freitech Solutions</h1>
+                            <h1 class="animated fadeInDown ">Headstone Young People&apos;s Platform </h1>
+                            <h2 class="animated fadeInDown ">presents</h2>
                             <p class="animated fadeInUp">
-                                Whatever your technology needs are, you have come to the right place.
-                                Look no furthetr as we promise to keep our word: Proffering technological solutions...
-                                We are only a call away...
+                                2021 Festival of Talents
+                                <br>Can you Sing, Rap, Dance, Act or do Spoken-Word...
                             </p>
-                            <p class="animated fadeInUp"><a class="btn btn-lg bg-explore" href="#">Learn More</a></p>
+                            <p class="animated fadeInUp">
+                                <a class="btn btn-lg bg-explore" href="{{url('/login')}}">
+                                    REGISTER TO AUDITION NOW
+                                </a>
+                            </p>
 
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('assets/img/slide/slide-2.jpg') }}" class="img-fluid w-100 h-100" alt="">
-                    <div class="dark-overlay"></div>
+                <div class="carousel-item slide-info-bg text-white">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="animated fadeInDown">Data Analytics and Visualization</h1>
-                            <p class="animated fadeInUp">Some representative placeholder content for the second slide of the carousel.</p>
-                            <p class="animated fadeInUp"><a class="btn btn-lg bg-explore" href="#">Learn More...</a></p>
+                            <h1 class="animated fadeInDown ">
+                                Can you Sing, Rap, Dance, Act or do Spoken-Word...
+                            </h1>
+                            <p class="animated fadeInUp">
+                                It's time to SHINE..
+                            </p>
+                            <p class="animated fadeInUp">
+                                <a class="btn btn-lg slide-info-bg text-white" href="{{url('/login')}}">
+                                    REGISTER TO AUDITION NOW
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('assets/img/slide/slide-1.jpg') }}" class="img-fluid w-100 h-100" alt="">
-                    <div class="dark-overlay"></div>
+                <div class="carousel-item slide-primary-bg text-white">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="animated fadeInDown">Creative Graphics Design</h1>
-                            <p class="animated fadeInUp"> Some representative placeholder content for the third slide of this carousel.</p>
-                            <p class="animated fadeInUp"><a class="btn btn-lg bg-explore" href="#">Learn More....</a></p>
+                            <h1 class="animated fadeInDown ">Headstone Young People&apos;s Platform </h1>
+                            <h2 class="animated fadeInDown ">presents</h2>
+                            <p class="animated fadeInUp">
+                                2021 Festival of Talents
+                                <span>...Ninth Edition...</span>
+                            </p>
+                            </p>
+                            <p class="animated fadeInUp">
+                                <a class="btn btn-lg slide-primary-bg text-white" href="{{url('/login')}}">
+                                    REGISTER TO AUDITION NOW
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('assets/img/slide/slide-3.jpg') }}" class="img-fluid w-100 h-100" alt="">
-                    <div class="dark-overlay"></div>
+                <div class="carousel-item slide-success-bg text-white">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 class="animated fadeInDown">Technology and Business Consultanting</h1>
-                            <p class="animated fadeInUp">Some representative placeholder content for the third slide of this carousel.</p>
-                            <p class="animated fadeInUp"><a class="btn btn-lg bg-explore" href="#">Learn More...</a></p>
+                            <h1 class="animated fadeInDown ">You can win 200,000 naira </h1>
+                            <p class="animated fadeInUp">
+                                plus other amazing prizes and opportunities
+                            </p>
+                            </p>
+                            <p class="animated fadeInUp">
+                                <a class="btn btn-lg slide-success-bg text-white" href="{{url('/login')}}">
+                                    REGISTER TO AUDITION NOW
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -111,7 +131,6 @@
             </button>
         </div>
 
-
         <section id="team" class="team" style="margin-top: 5px;">
             <div class="container-fluid">
                 <div class="row">
@@ -124,60 +143,10 @@
                                 <hr style="margin-top: 10px;  background: #000; height: 2.5px;">
                                 <div class="col-md-12">
                                     <div class="member-info">
-                                        <h4 class="">Step 1: Register using the below link</h4>
-                                        <span>Make sure to use a valid e-mail address</span>
-                                        <p><a class="btn btn-primary w-100" href="{{ url('/register') }}">Register</a></p>
-                                        <div class="social">
-                                            <a href=""><i class="icofont-twitter"></i></a>
-                                            <a href=""><i class="icofont-instagram"></i></a>
-                                            <a href=""> <i class="icofont-linkedin"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="member d-flex align-items-start">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <img src="{{ asset('assets/admin/img/slide-3.png') }}" class="img-fluid" alt="">
-                                </div>
-                                <hr style="margin-top: 10px;  background: #000; height: 2.5px;">
-                                <div class="col-md-12">
-                                    <div class="member-info">
-                                        <h4 class="">Step 2: Verify your E-Mail Address</h4>
-                                        <span>This is higly required step.</span>
-
-                                        <div class="social">
-                                            <a href=""><i class="icofont-twitter"></i></a>
-                                            <a href=""><i class="icofont-instagram"></i></a>
-                                            <a href=""> <i class="icofont-linkedin"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="member d-flex align-items-start">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <img src="{{ asset('assets/admin/img/slide-3.png') }}" class="img-fluid" alt="">
-                                </div>
-                                <hr style="margin-top: 10px;  background: #000; height: 2.5px;">
-                                <div class="col-md-12">
-                                    <div class="member-info">
                                         <h4 class="">Step 3: Login to your Profile</h4>
                                         <span>Upload a video to enter the Competition...</span>
                                         <p><a class="btn btn-success w-100" href="{{ url('/login') }}">Login</a></p>
-                                        <div class="social">
-                                            <a href=""><i class="icofont-twitter"></i></a>
-                                            <a href=""><i class="icofont-instagram"></i></a>
-                                            <a href=""> <i class="icofont-linkedin"></i> </a>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -196,11 +165,7 @@
                                         <h4 class="">Step 4: Enter the competition with your preffered video uploads</h4>
                                         <span>Check your E-mail for feedback on your entry</span>
                                         <p></p>
-                                        <div class="social">
-                                            <a href=""><i class="icofont-twitter"></i></a>
-                                            <a href=""><i class="icofont-instagram"></i></a>
-                                            <a href=""> <i class="icofont-linkedin"></i> </a>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>

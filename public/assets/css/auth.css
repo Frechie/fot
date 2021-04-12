@@ -27,8 +27,8 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background: linear-gradient(rgba(149, 109, 172, 0.897), rgba(84, 46, 105, 0.87)), url("../admin/img/login-bg.jpg") fixed center center;
-  
+  background: linear-gradient( rgba(105, 17, 156, 0.973), rgba(59, 2, 83, 0.945)), url("../admin/img/fot-bg-wide.jpg") fixed center center;
+  transition: opacity 0.5s ease-out;
 }
 
 .bg-purple{
