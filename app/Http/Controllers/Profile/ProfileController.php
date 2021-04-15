@@ -87,7 +87,7 @@ class ProfileController extends Controller {
         $entry = UserUploads::where('user_id',  $request->user()->user_id)
                             ->where('upload_type', 'video')
                             ->orderBy('created_at', 'desc')
-                            ->take(3)
+                            ->take(4)
                             ->get();
 
         return view('profile.view-profile')->with('userUploads', $entry);
