@@ -10,15 +10,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 
-class DasboardController extends Controller
-{
+class DasboardController extends Controller{
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct()    {
         $this->middleware(['auth', 'verified']);
     }
 

@@ -17,12 +17,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['verify' => true]);
 Route::get('/dashboard', [App\Http\Controllers\DasboardController::class, 'index'])->name('home');
-Route::put('/profile/upload-profile-pix', [App\Http\Controllers\Profile\ProfileController::class, 'updateProfilePix']);
-Route::get('/profile/upload-video-entry', [App\Http\Controllers\Profile\ProfileController::class, 'uploadVideoEntry']);
-Route::get('/profile/view-entry', [App\Http\Controllers\Profile\ProfileController::class, 'viewEntry']);
-Route::post('/profile/upload-video-entry', [App\Http\Controllers\Profile\ProfileController::class, 'store']);
-Route::post('/profile/contact-update', [App\Http\Controllers\Profile\ProfileController::class, 'contactUpdate']);
-Route::get('/profile/edit', [App\Http\Controllers\Profile\ProfileController::class, 'viewProfile']);
-Route::post('/profile/update', [App\Http\Controllers\Profile\ProfileController::class, 'updateProfile']);
+
+Route::prefix('profile')->group(function () {
+
+    Route::put('/upload-profile-pix', [App\Http\Controllers\Profile\ProfileController::class, 'updateProfilePix']);
+    Route::get('/upload-video-entry', [App\Http\Controllers\Profile\ProfileController::class, 'uploadVideoEntry']);
+    Route::get('/view-entry', [App\Http\Controllers\Profile\ProfileController::class, 'viewEntry']);
+    Route::post('/upload-video-entry', [App\Http\Controllers\Profile\ProfileController::class, 'store']);
+    Route::post('/contact-update', [App\Http\Controllers\Profile\ProfileController::class, 'contactUpdate']);
+    Route::get('/edit', [App\Http\Controllers\Profile\ProfileController::class, 'viewProfile']);
+    Route::post('/update', [App\Http\Controllers\Profile\ProfileController::class, 'updateProfile']);
+});
+
+Route::prefix('admin')->group(function () {
+
+    Route::get('/login', [App\Http\Controllers\Admin\AdminController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/login', [App\Http\Controllers\Admin\AdminController::class, 'login'])->name('admin.login.submit');
+    Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'loadDashboard'])
+                        ->name('admin.dashboard')->middleware('admin');
+});
+
+
+Auth::routes(['verify' => true]);
